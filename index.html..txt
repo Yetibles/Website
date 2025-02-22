@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yetibles - Adventure Meets Wellness</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        nav {
+            background: linear-gradient(90deg, #026c80, #014b60);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 1.5rem;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            opacity: 0.8;
+        }
+        header {
+            background: url('path_to_background_image') no-repeat center center/cover;
+            color: #fff;
+            padding: 8rem 0;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .hero-text {
+            max-width: 800px;
+            margin: auto;
+        }
+        .product {
+            background: #fff;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .testimonials {
+            background: #eef5f9;
+            padding: 3rem;
+            text-align: center;
+        }
+        .testimonial {
+            max-width: 600px;
+            margin: auto;
+            font-style: italic;
+        }
+        .contact {
+            padding: 3rem;
+            text-align: center;
+            background: #fff;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #026c80;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .cta-button:hover {
+            background: #014b60;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <a href="#retailers">Retailers</a>
+    </div>
+</nav>
+
+<header id="home">
+    <div class="hero-text">
+        <h1>Adventure Meets Wellness</h1>
+        <p>Explore science-backed solutions for a better experience.</p>
+    </div>
+</header>
+
+<section class="container" id="products">
+    <h2>Our Products</h2>
+    <div class="product">
+        <h3>Throat Coat – Vapor & Dab Support Lozenges</h3>
+        <p>Coat. Protect. Elevate. Designed to soothe your throat **before** vaping or dabbing, reducing irritation while enhancing smooth pulls.</p>
+    </div>
+    <div class="product">
+        <h3>CBN Sleep Blend – Rest & Recovery</h3>
+        <p>Dream better, wake brighter. Infused with **CBN, CBD, and melatonin**, our sleep blend promotes deep relaxation and restorative sleep.</p>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2>Why Customers Love Yetibles</h2>
+    <p class="testimonial">"Throat Coat changed my smoking experience completely – smoothest hit ever!" - Alex R.</p>
+    <p class="testimonial">"CBN Sleep Blend helped me fall asleep faster and wake up refreshed!" - Jordan L.</p>
+</section>
+
+<section class="container" id="retailers">
+    <h2>For Retailers</h2>
+    <p>Interested in stocking Yetibles? We offer wholesale opportunities for dispensaries, vape shops, and wellness retailers.</p>
+</section>
+
+<section class="contact" id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Want to learn more? Reach out to us!</p>
+        <form>
+            <input type="text" placeholder="Your Name" required><br><br>
+            <input type="email" placeholder="Your Email" required><br><br>
+            <textarea placeholder="Your Message" required></textarea><br><br>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Yetibles. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
