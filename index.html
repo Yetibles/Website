@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yetibles - Adventure Meets Wellness</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
+            color: #0288d1;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
         .container {
             width: 85%;
@@ -20,13 +22,14 @@
             padding: 2rem 0;
         }
         nav {
-            background: #026c80;
+            background: #0288d1;
             color: #fff;
             padding: 1rem 0;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            font-weight: 600;
         }
         nav a {
             color: #fff;
@@ -36,58 +39,94 @@
             transition: 0.3s;
         }
         nav a:hover {
-            opacity: 0.7;
+            opacity: 0.8;
         }
-        header {
-            background: url('path_to_background_image') no-repeat center center/cover;
-            color: #fff;
-            padding: 6rem 0;
+        .hero {
+            background: url('path_to_mountain_image') no-repeat center center/cover;
+            color: #ffffff;
+            padding: 12rem 0;
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 3rem;
             font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+        .blizzard {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: url('path_to_blizzard_effect') repeat;
+            opacity: 0.8;
+            animation: blizzard 10s linear infinite;
+        }
+        @keyframes blizzard {
+            from { background-position: 0 0; }
+            to { background-position: 200px 200px; }
         }
         .hero-text {
-            max-width: 800px;
+            max-width: 70%;
             margin: auto;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 0;
         }
         .product {
-            background: #fff;
+            background: #ffffff;
+            color: #0288d1;
             padding: 2rem;
             margin: 2rem 0;
             text-align: center;
             border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease-in-out;
+            max-width: 600px;
         }
         .product:hover {
             transform: scale(1.05);
         }
-        .contact {
-            padding: 3rem;
+        .logo {
             text-align: center;
-            background: #fff;
+            font-size: 4rem;
+            font-weight: bold;
+            color: #0288d1;
+            width: 100%;
+            display: block;
+            margin: 2rem 0;
         }
         footer {
-            background: #333;
+            background: #0288d1;
             color: #fff;
-            padding: 1rem;
+            padding: 2rem;
             text-align: center;
         }
         .cta-button {
             display: inline-block;
-            background: #026c80;
+            background: #0288d1;
             color: #fff;
             padding: 0.8rem 1.5rem;
             text-decoration: none;
             border-radius: 5px;
             transition: 0.3s;
+            margin-top: 1rem;
         }
         .cta-button:hover {
-            background: #014b60;
+            background: #0277bd;
         }
     </style>
 </head>
 <body>
+
+<div class="logo">Yetibles</div>
 
 <nav>
     <div class="container">
@@ -99,48 +138,23 @@
     </div>
 </nav>
 
-<header id="home">
+<header class="hero" id="home">
+    <div class="blizzard"></div>
     <div class="hero-text">
         <h1>Adventure Meets Wellness</h1>
-        <p>Explore science-backed solutions for a better experience.</p>
+        <p>Discover the wild, embrace the journey, and experience the best of nature.</p>
     </div>
 </header>
 
-<section class="container" id="products">
+<section class="section" id="products">
     <h2>Our Products</h2>
     <div class="product">
         <h3>Throat Coat – Vapor & Dab Support Lozenges</h3>
         <p>Coat. Protect. Elevate. Designed to soothe your throat **before** vaping or dabbing, reducing irritation while enhancing smooth pulls.</p>
-        <a href="#contact" class="cta-button">Learn More</a>
     </div>
     <div class="product">
-        <h3>CBN Sleep Blend – Rest & Recovery</h3>
-        <p>Dream better, wake brighter. Infused with **CBN, CBD, and melatonin**, our sleep blend promotes deep relaxation and restorative sleep.</p>
-        <a href="#contact" class="cta-button">Learn More</a>
-    </div>
-</section>
-
-<section class="container" id="about">
-    <h2>About Yetibles</h2>
-    <p>Yetibles is more than a brand—it’s a commitment to adventure and wellness. We combine cutting-edge science with natural ingredients to create products that enhance your lifestyle.</p>
-</section>
-
-<section class="container" id="retailers">
-    <h2>For Retailers</h2>
-    <p>Interested in stocking Yetibles? We offer wholesale opportunities for dispensaries, vape shops, and wellness retailers.</p>
-    <a href="#contact" class="cta-button">Wholesale Inquiry</a>
-</section>
-
-<section class="contact" id="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p>Want to learn more? Reach out to us!</p>
-        <form>
-            <input type="text" placeholder="Your Name" required><br><br>
-            <input type="email" placeholder="Your Email" required><br><br>
-            <textarea placeholder="Your Message" required></textarea><br><br>
-            <button type="submit" class="cta-button">Send Message</button>
-        </form>
+        <h3>Hibernate – Rest & Recovery</h3>
+        <p>Dream better, wake brighter. Infused with **CBN, CBD, and melatonin**, Hibernate promotes deep relaxation and restorative sleep.</p>
     </div>
 </section>
 
